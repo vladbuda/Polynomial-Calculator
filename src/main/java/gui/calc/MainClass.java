@@ -1,9 +1,10 @@
-package polynomial.calc;
+package gui.calc;
 
 public class MainClass 
 {
 	public static void main(String[] args)
 	{
-		System.out.println("Salut lume!");
+		
+		GUI calculator = new GUI();
 	}
 }
