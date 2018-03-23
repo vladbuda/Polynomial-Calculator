@@ -86,9 +86,9 @@ public class Operation
 		copyP2.sort();
 		Monom firstP1 = copyP1.getTerms().get(0);
 		Monom firstP2 = copyP2.getTerms().get(0);
-		while(firstP1.getDegree() >= firstP2.getDegree() && Math.abs(firstP1.getCoefficient()/firstP2.getCoefficient()) >= 1)
+		while(firstP1.getDegree() >= firstP2.getDegree())
 		{
-			Monom auxm = new Monom((int)(firstP1.getCoefficient()/firstP2.getCoefficient()),firstP1.getDegree()-firstP2.getDegree());
+			Monom auxm = new Monom((float)(firstP1.getCoefficient()/firstP2.getCoefficient()),firstP1.getDegree()-firstP2.getDegree());
 			quotient.addMonom(auxm);
 			Polinom auxp = Operation.multiply(copyP2, auxm);
 			copyP1 = Operation.subtract(copyP1, auxp);
